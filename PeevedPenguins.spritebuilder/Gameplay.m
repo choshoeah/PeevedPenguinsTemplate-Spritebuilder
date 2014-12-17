@@ -35,7 +35,7 @@
     _mouseJointNode.physicsBody.collisionMask = @[];
 }
 
--(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+/* -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     CGPoint touchLocation = [touch locationInNode:_contentNode];
     
@@ -77,6 +77,8 @@
     // when touches are cancelled, meaning the user drags their finger off the screen or onto something else, release the catapult
     [self releaseCatapult];
 }
+ */
+
 
 
 - (void)launchPenguin {
@@ -102,6 +104,46 @@
 - (void)retry {
     // reload this level
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"Gameplay"]];
+}
+
+-(void) touchBegan:(CCTouch *)touch withEvent: (CCTouchEvent *)event{
+    
+    // [self launchPenguin];
+    
+    CGPoint touchLocation = [touch locationInNode:_contentNode];
+    
+    
+    if (CGRectContainsPoint([_catapultArm boundingBox], touchLocation)) {
+        _mouseJointNode.position = touchLocation;
+        
+        
+        _mouseJoint = [CCPhysicsJoint connectedSpringJointWithBodyA:_mouseJointNode.physicsBody bodyB:_catapultArm.physicsBody anchorA:ccp(0, 0) anchorB:ccp(34, 138) restLength:0.f stiffness:3000.f damping:150.f];
+        
+    }
+}
+
+-(void)touchMoved:(CCTouch *)touch withEvent: (CCTouchEvent *)event{
+    
+    CGPoint touchLocation = [touch locationInNode:_contentNode];
+    _mouseJointNode.position = touchLocation;
+    
+    CCLOG(@"_mouseJointNode=%@",NSStringFromCGPoint(_mouseJointNode.position));
+    CCLOG(@"touchLocation=%@",NSStringFromCGPoint(touchLocation));
+}
+
+-(void)releaseCatapult{
+    if (_mouseJoint != nil) {
+        [_mouseJoint invalidate];
+        _mouseJoint = nil;
+    }
+}
+
+-(void) touchEnded:(UITouch *)touch withEvent: (UIEvent *)event{
+    [self releaseCatapult];
+}
+
+-(void) touchCancelled:(UITouch *)touch withEvent: (UIEvent *)event{
+    [self releaseCatapult];
 }
 
 @end
