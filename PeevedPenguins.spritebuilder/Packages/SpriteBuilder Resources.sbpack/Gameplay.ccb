@@ -55,7 +55,7 @@
 					<string>Position</string>
 					<key>value</key>
 					<array>
-						<real>216.99996948242188</real>
+						<real>227.99996948242188</real>
 						<real>100.00003051757812</real>
 						<integer>0</integer>
 						<integer>0</integer>
@@ -164,8 +164,8 @@
 					<string>Position</string>
 					<key>value</key>
 					<array>
-						<real>226.55465698242188</real>
-						<real>298.67581176757812</real>
+						<real>233</real>
+						<real>299</real>
 						<integer>0</integer>
 						<integer>0</integer>
 						<integer>0</integer>
@@ -202,8 +202,8 @@
 					<string>Point</string>
 					<key>value</key>
 					<array>
-						<real>-1.445343017578125</real>
-						<real>20.675811767578125</real>
+						<real>0.0</real>
+						<real>14</real>
 					</array>
 				</dict>
 				<dict>
@@ -213,8 +213,8 @@
 					<string>Point</string>
 					<key>value</key>
 					<array>
-						<real>17.85546875</real>
-						<real>148.78128051757812</real>
+						<real>14</real>
+						<real>150</real>
 					</array>
 				</dict>
 				<dict>
@@ -608,7 +608,7 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>228</real>
+											<real>239</real>
 											<real>188</real>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -867,8 +867,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>242</real>
-											<real>84</real>
+											<real>252</real>
+											<real>81</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1260,8 +1260,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>228</real>
-											<real>278</real>
+											<real>233</real>
+											<real>285</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1546,8 +1546,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
