@@ -21,7 +21,7 @@
 }
 
 // is called when CCB file has completed loading
-/*- (void)didLoadFromCCB {
+- (void)didLoadFromCCB {
     // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
     
@@ -37,7 +37,7 @@
     _mouseJointNode.physicsBody.collisionMask = @[];
     
     _physicsNode.collisionDelegate = self;
-}*/
+}
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
