@@ -135,7 +135,6 @@
 }
 
 - (void)sealRemoved:(CCNode *)seal {
-    [seal removeFromParent];
     
     // load particle effect
     CCParticleSystem *explosion = (CCParticleSystem *)[CCBReader load:@"SealExplosion"];
